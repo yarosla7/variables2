@@ -304,7 +304,7 @@ public class Main {
 
         System.out.println("\nЗадача 8:");
 
-        int mashaSalaryNow = 64760;
+        int mashaSalaryNow = 67760;
 
         int denisSalaryNow = 83690;
 
@@ -316,11 +316,11 @@ public class Main {
 
         int kristinaSalaryYearNow = kristinaSalaryNow * 12;
 
-        int mashaNewSalaryUp = mashaSalaryNow / 100 * 10;
+        int mashaNewSalaryUp = mashaSalaryNow / 10;
 
-        int denisNewSalaryUp = denisSalaryNow / 100 * 10;
+        int denisNewSalaryUp = denisSalaryNow / 10;
 
-        int kristinaNewSalaryUp = kristinaSalaryNow / 100 * 10;
+        int kristinaNewSalaryUp = kristinaSalaryNow / 10;
 
         int mashaNewSalary = mashaSalaryNow + mashaNewSalaryUp;
 
@@ -334,11 +334,15 @@ public class Main {
 
         int kristinaNewYear = kristinaNewSalary * 12;
 
-        int differenceMasha = mashaNewYear % mashaSalaryYearNow;
+        int differenceMasha = mashaNewYear - mashaSalaryYearNow;
 
         int differenceDenis = denisNewYear % denisSalaryYearNow;
 
         int differenceKristina = kristinaNewYear % kristinaSalaryYearNow;
+
+        System.out.println(mashaNewSalary);
+
+        System.out.println(mashaSalaryYearNow);
 
         System.out.println("\nМаша теперь получает " + mashaNewSalary + " рублей, годовой доход вырос на " + differenceMasha + " рублей.");
 
