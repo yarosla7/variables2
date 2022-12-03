@@ -1,3 +1,5 @@
+import static java.util.Locale.US;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -153,7 +155,7 @@ public class Main {
 
         int twentyMinPerformance = oneMinPerformance * 20;
 
-        int day = 24;
+        int day = 1440;
 
         int dayPerformance = oneMinPerformance * day;
 
@@ -192,9 +194,7 @@ public class Main {
 
         int brownDyeNeed = 4;
 
-        int oneClassNeed = whiteDyeNeed + brownDyeNeed;
-
-        int sumClasses = sumJars / oneClassNeed;
+        int sumClasses = sumJars / (brownDyeNeed + whiteDyeNeed);
 
         int whiteDyeClass = sumClasses * whiteDyeNeed;
 
@@ -223,17 +223,15 @@ public class Main {
 
         System.out.println("\nЗадача_6:");
 
-        int oneKg = 1000;
-
-        double ml = 1.05;
-
         int oneBanana = 80;
 
         int allBananas = oneBanana * 5;
 
-        int allMilkMl = 200;
+        int milk = 2;
 
-        double allMilkGr = allMilkMl * ml;
+        int oneMilkGr = 105;
+
+        int allMilkGr = milk * oneMilkGr;
 
         int iceCream = 100;
 
@@ -243,11 +241,11 @@ public class Main {
 
         int allEggs = egg * 4;
 
-        double breakfastGr = (int) (allBananas + allMilkGr + allIceCream + allEggs);
+        int breakfastGr = allBananas + allMilkGr + allIceCream + allEggs;
 
-        double breakfastKg = breakfastGr / oneKg;
+        double breakfastKg = breakfastGr / 1000D;
 
-        System.out.println("\nЗавтрак весит в граммах " + breakfastGr + " грамм и в киллограммах " + breakfastKg + " киллограмм.");
+        System.out.println("\nЗавтрак весит в граммах " + breakfastGr + " грамм и в килограммах " + breakfastKg + " килограмм.");
 
     }
 
@@ -264,26 +262,21 @@ public class Main {
 
         System.out.println("\nЗадача_7:");
 
-        int oneKg = 1000;
-
-        int needToStayKg = 7;
-
-        int needToStayGr = needToStayKg * oneKg;
+        int needToStayGr = 7000;
 
         int days250gr = needToStayGr / 250;
 
         int days500gr = needToStayGr / 500;
 
-        int middleGrs = (250 + 500) / 2;
+        double middleGrs = (250 + 500) / 2D;
 
-        int middleDaysNeedTo = (days250gr + days500gr) / 2;
+        double middleDaysNeedTo = needToStayGr / middleGrs;
 
         System.out.println("\n" + days250gr + " дней уйдет на похудение, если спортсмен будет терять каждый день по 250 грамм.");
 
         System.out.println(days500gr + " дней уйдет на похудение, если спортсмен будет терять каждый день по 500 грамм.");
 
-        System.out.println(middleDaysNeedTo + " дней уйдет на похудение, если спортсмен будет терять каждый день по среднее количеств грамм (" + middleGrs + " грамм).");
-
+        System.out.printf(US, "И среднее количество для похудения равно %.2f дней.%n", middleDaysNeedTo);
     }
 
     public static void task8() {
@@ -302,7 +295,7 @@ public class Main {
 
     Выведите в консоль информацию по каждому сотруднику. Например: «Маша теперь получает ... рублей. Годовой доход вырос на ... рублей». */
 
-        System.out.println("\nЗадача 8:");
+        System.out.println("\nЗадача_8:");
 
         int mashaSalaryNow = 67760;
 
@@ -339,10 +332,6 @@ public class Main {
         int differenceDenis = denisNewYear % denisSalaryYearNow;
 
         int differenceKristina = kristinaNewYear % kristinaSalaryYearNow;
-
-        System.out.println(mashaNewSalary);
-
-        System.out.println(mashaSalaryYearNow);
 
         System.out.println("\nМаша теперь получает " + mashaNewSalary + " рублей, годовой доход вырос на " + differenceMasha + " рублей.");
 
